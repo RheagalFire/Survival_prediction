@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Titanic Survival Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src={{url_for('static',filename="app.js")}}></script>
+	<link rel="stylesheet" href={{url_for('static',filename="app.css")}}>
+</head>
+<body>
+	
+<div class="img"></div>
+<h1 align='center'>Titanic Survival Prediction</h1>
+<form class="form">
+	<h2>Age</h2>
+    <input class="Age"  type="text" id="uiAge" class="floatLabel" name="Age(year)" value="22">
+	<h2>Sex</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-Sex-1" name="uiSex" value="M"/>
+		<label for="radio-Sex-1">M</label>
+		<input type="radio" id="radio-Sex-2" name="uiSex" value="F" checked/>
+		<label for="radio-Sex-2">F</label>
+	</div>
+	</form>
+<form class="form">
+	<h2>Siblings Aboard</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-S-0" name="Siblings" value="0"/>
+		<label for="radio-S-0">0</label>
+		<input type="radio" id="radio-S-1" name="Siblings" value="1" checked/>
+		<label for="radio-S-1">1</label>
+		<input type="radio" id="radio-S-2" name="Siblings" value="2"/>
+		<label for="radio-S-2">2</label>
+		<input type="radio" id="radio-S-3" name="Siblings" value="3"/>
+		<label for="radio-S-3">3</label>
+		<input type="radio" id="radio-S-4" name="Siblings" value="4"/>
+		<label for="radio-S-4">4</label>
+        <input type="radio" id="radio-S-5" name="Siblings" value="5"/>
+		<label for="radio-S-5">5</label>
+	</div>
+</form>
+<form class="form">
+    <h2>Embarked From</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-E-0" name="Embarked" value="S"/>
+		<label for="radio-E-0">Southampton</label>
+		<input type="radio" id="radio-E-1" name="Embarked" value="C" checked/>
+		<label for="radio-E-1">Cherbourg</label>
+		<input type="radio" id="radio-E-2" name="Embarked" value="Q"/>
+		<label for="radio-E-2">Queenstown</label>
+	</div>
+</form>
+<form class="form">
+    <h2>Parent of</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-P-0" name="Parch" value="0"/>
+		<label for="radio-P-0">0</label>
+		<input type="radio" id="radio-P-1" name="Parch" value="1" checked/>
+		<label for="radio-P-1">1</label>
+		<input type="radio" id="radio-P-2" name="Parch" value="2"/>
+		<label for="radio-P-2">2</label>
+        <input type="radio" id="radio-P-3" name="Parch" value="3"/>
+		<label for="radio-P-3">3</label>
+        <input type="radio" id="radio-P-4" name="Parch" value="4"/>
+		<label for="radio-P-4">4</label>
+        <input type="radio" id="radio-P-5" name="Parch" value="5"/>
+		<label for="radio-P-5">5</label>
+	</div>
+</form>
+<form class="form">
+	<h2>Fare</h2>
+    <input class="Fare"  type="text" id="uiFare" class="floatLabel" name="Fare" value="13">
+	</form>
+    <form class='form'>
+	<button class="submit" onclick="onClickedEstimateSurvial()" type="button">Predict Survial</button>
+	<div id="uiEstimateSur" class="result">	<h2></h2> </div>
+</body>
+</html>
